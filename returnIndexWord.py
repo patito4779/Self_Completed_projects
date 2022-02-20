@@ -203,3 +203,28 @@ print(count_letters("Math is fun! 2+2=4"))
 print(count_letters("This is a sentence."))
 # Should be {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}
 
+
+# Skipping through elements based on odd and even positions in a list using indexing
+def skip_elements(elements):
+	# Initialize variables
+	new_list = []
+	i = 0
+
+	# Iterate through the list
+	for element in elements:
+		
+		if elements.index(element) % 2 == 0:
+			# Add this element to the resulting list
+			new_list.append(element)
+		# Increment i
+		i += 1
+
+	return new_list
+
+print(skip_elements(["a", "b", "c", "d", "e", "f", "g"])) # Should be ['a', 'c', 'e', 'g']
+print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach'])) # Should be ['Orange', 'Strawberry', 'Peach']
+print(skip_elements([])) # Should be []
+
+
+
+
