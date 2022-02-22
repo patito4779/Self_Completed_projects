@@ -6,7 +6,7 @@ cwd = os.getenv("HOME")
 # print(cwd)
 
 # Enter the path to the folder where the files you want to rename are located
-path = cwd+"Desktop/test"
+path = cwd+"/Desktop/test"
 def change_extension(path):
     # Traverse through the files in the path
     for files in os.listdir(path):
