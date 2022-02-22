@@ -150,15 +150,11 @@ def format_address(address_string):
 
   # Separate the address string into parts
 
-  # Traverse through the address parts
+  
   for parts in address:
     
     # Determine if the address part is the
     # house number or part of the street name
-
-  # Does anything else need to be done 
-  # before returning the result?
-  
   # Return the formatted string  
     return "house number {} on street named {}".format(address[0], " ".join(address[1:]))
 
@@ -224,6 +220,15 @@ def skip_elements(elements):
 print(skip_elements(["a", "b", "c", "d", "e", "f", "g"])) # Should be ['a', 'c', 'e', 'g']
 print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach'])) # Should be ['Orange', 'Strawberry', 'Peach']
 print(skip_elements([])) # Should be []
+
+
+def convert(seconds):
+  hours = seconds // 3600
+  minutes = (seconds - hours * 3600) // 60
+  remaining_seconds = seconds - hours * 3600 - minutes * 60
+  return hours, minutes, remaining_seconds
+
+
 
 
 
